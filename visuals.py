@@ -65,6 +65,7 @@ class Cell:
         self.has_right_wall = has_right_wall
         self.has_top_wall = has_top_wall
         self.has_bottom_wall = has_bottom_wall
+        self.visited = False
         self._x1 = point_1.x
         self._x2 = point_2.x
         self._y1 = point_1.y
@@ -113,5 +114,4 @@ class Cell:
         if undo:
             color = "gray"
         line = Line(self._midpoint, to_cell._midpoint)
-        print(line.point_1.x, line.point_1.y, line.point_2.x, line.point_2.y)
         line.draw(self._win.canvas, color)
